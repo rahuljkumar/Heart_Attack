@@ -1,0 +1,167 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Heart attack prediction</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        
+        
+        <div class="mb-3">
+            <label class="form-label">Enter your age </label>
+            <input class="form-control" type="number" name="age"
+                placeholder="Enter your age" min='0' max='1000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Sex </label>
+            <select class="form-control" name="sex" placeholder="Enter you gender" required>
+                <option class="placeholder" selected disabled value="">Select</option>
+                <option value="0">
+                    Male
+                </option>
+                <option value="1">
+                    Female
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Enter your chest pain type </label>
+            <select class="form-control" name="cp" placeholder="Enter you cp" required>
+                <option class="placeholder" selected disabled value="">Select</option>
+                <option value="0">
+                    Typical Angina
+                </option>
+                <option value="1">
+                    Atypical Angina
+                </option>
+                <option value="2">
+                    Non-Anginal Pain
+                </option>
+                <option value="3">
+                    Asymptomatic
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Enter your resting blood pressure </label>
+            <input class="form-control" type="number" name="trtbps"
+                placeholder="Enter your trtpbs" min='0' max='1000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Enter your cholesterol level </label>
+            <input class="form-control" type="number" name="chol"
+                placeholder="Enter your trtpbs" min='0' max='1000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Select your fasting blood sugar level </label>
+            <select class="form-control" name="fbs" placeholder="Enter you fbs" required>
+                <option class="placeholder" selected disabled value="">Select</option>
+                <option value="0">
+                    less than 120 mg/dl
+                </option>
+                <option value="1">
+                    greater than 120 mg/dl
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Select your resting ECG results </label>
+            <select class="form-control" name="restecg" placeholder="Enter you restecg" required>
+                <option class="placeholder" selected disabled value="">Select</option>
+                <option value="0">
+                    Normal
+                </option>
+                <option value="1">
+                    ST-T wave abnormality
+                </option>
+                <option value="2">
+                    Showing probable or definite left ventricular hypertrophy by Estes' criteria
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Enter your maximum heart rate </label>
+            <input class="form-control" type="number" name="thalachh"
+                placeholder="Enter your trtpbs" min='0' max='1000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Do you have excercise induced angina</label>
+            <select class="form-control" name="exng" placeholder="Enter you exng" required>
+                <option class="placeholder" selected disabled value="">Select</option>
+                <option value="0">
+                    No
+                </option>
+                <option value="1">
+                    Yes
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Enter your oldpeak value </label>
+            <input class="form-control" type="number" name="oldpeak"
+                placeholder="Enter your trtpbs" min='0' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Select your SLP level </label>
+            <select class="form-control" name="slp" placeholder="Enter you slp" required>
+                <option class="placeholder" selected disabled value="">Select</option>
+                <option value="0">
+                    0
+                </option>
+                <option value="1">
+                    1
+                </option>
+                <option value="2">
+                    2
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Select the number of major vessels </label>
+            <select class="form-control" name="caa" placeholder="Enter you caa" required>
+                <option class="placeholder" selected disabled value="">Select</option>
+                <option value="0">
+                    0
+                </option>
+                <option value="1">
+                    1
+                </option>
+                <option value="2">
+                    2
+                </option>
+                <option value="3">
+                    3
+                </option>
+                <option value="4">
+                    4
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Select your Thallium stress test result </label>
+            <select class="form-control" name="thall" placeholder="Enter you thall" required>
+                <option class="placeholder" selected disabled value="">Select</option>
+                <option value="0">
+                    0
+                </option>
+                <option value="1">
+                    1
+                </option>
+                <option value="2">
+                    2
+                </option>
+                <option value="3">
+                    3
+                </option>
+                
+            </select>
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict">
+        </div>
+    </form>
+    
+    <h2>
+       {{results}}
+    </h2>
+   <body>
+</html>
