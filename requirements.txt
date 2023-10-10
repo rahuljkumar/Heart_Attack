@@ -3,4 +3,8 @@ pandas
 seaborn
 scikit-learn
 Flask
+dill
+catboost
+xgboost
+lightgbm
 #-e .
