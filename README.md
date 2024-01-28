@@ -6,3 +6,7 @@ I have used multiple machine learning algorithms for training and have chosen th
 
 I have containerized the entire code into modules ready for deployment in production. All the containerized code can be accessed from the src folder.
 I have used Flask API to consume the model using a webpage. The entire code can be accessed in the app.py file in the main folder.
+
+Setup.py: Gets the list of libraries from requirements.txt and includes them as installation dependencies. It also creates out project as a Py package.
+App.py: Flask web app
+
