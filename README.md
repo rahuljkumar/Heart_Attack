@@ -18,7 +18,7 @@ The different files and folders in the projects and their functionalities are as
 - Data_transformation.py: Pipeline for scaling, data transformation are defined. The Scaler is pickled in this file. Reads the train and test csv files and does scaling and returns the scaled dataset.
 - Model_trainer.py: Has the method for model training. Splits the dataset into Dependent and Independent variables. Performs model training and evaluation. Model is pickled here.
 - Predict_pipeline.py: Takes input from users through web app, loads the model and scalers from pickled files, transforms the input using preprocessor and uses the model to predict the output.
-- Artifcats folder: Dataset, training dataset, test dataset, model and scaler pickle files are stored here
+- Artifacts folder: Dataset, training dataset, test dataset, model and scaler pickle files are stored here
 
 
 
